@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import service_1 from "../../../assets/images/service1.png";
 import service_2 from "../../../assets/images/service2.png";
+import { handleWhatsAppOpen } from "../../../functions";
 
 const services = [
   {
@@ -49,7 +50,10 @@ const OurServices = () => {
             Our services
           </h2>
           <div className=" w-[273px] h-[58px] bg-btn p-1 ">
-            <button className="btn-book-now text-white w-[265px] h-[50px] rounded-xl py-[14px] px-[20px] bg-[#050810]">
+            <button
+              onClick={handleWhatsAppOpen}
+              className="btn-book-now text-white w-[265px] h-[50px] rounded-xl py-[14px] px-[20px] bg-[#050810]"
+            >
               Book now
             </button>
           </div>

@@ -7,6 +7,7 @@ import Feedback from "./components/Feedback";
 import { InfoSalonOpen } from "./components/InfoSalonOpen";
 import OurServices from "./components/OurServices";
 import { useDevice } from "../..//hooks/useDevice";
+import { handleWhatsAppOpen } from "../../functions";
 
 const HomePage = () => {
   const isMobile = useDevice() === "mobile";
@@ -40,7 +41,10 @@ const HomePage = () => {
               Custom designs · Natural products · Hygienic care
             </h2>
             <div className=" w-[214px] h-[58px] bg-btn p-1 ">
-              <button className="btn-book-now text-white w-[206px] h-[50px] rounded-xl py-[14px] px-[20px] bg-[#050810]">
+              <button
+                onClick={handleWhatsAppOpen}
+                className="btn-book-now text-white w-[206px] h-[50px] rounded-xl py-[14px] px-[20px] bg-[#050810]"
+              >
                 Book now
               </button>
             </div>

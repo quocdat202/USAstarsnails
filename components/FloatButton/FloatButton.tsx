@@ -2,21 +2,11 @@ import React from "react";
 import { PhoneBtnIcon } from "../../assets/svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
 import Image from "next/image";
+import { handleWhatsAppOpen } from "../../functions";
 
 export const FloatButton = () => {
   const handlePhoneCall = () => {
     window.location.href = "tel:01582948644";
-  };
-
-  const handleWhatsAppOpen = () => {
-    const phoneNumber = "01582948644";
-    const message = "Hello! I would like to get in touch.";
-
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-
-    window.open(whatsappUrl, "_blank");
   };
 
   return (

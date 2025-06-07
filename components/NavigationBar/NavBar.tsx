@@ -1,100 +1,132 @@
+import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { useCallback, useEffect, useState } from "react";
+import logo from "../../assets/images/logo.png";
+import { MENU_ITEMS } from "../../constants";
+import { useRouter } from "next/router";
 
 const NavBar = () => {
-  const [nav, setNav] = useState(false);
-  const [color, setColor] = useState("transparent");
-  const [textColor, setTextColor] = useState("black");
+  const router = useRouter();
+  const currentPath = router.asPath;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleNav = () => {
-    setNav(!nav);
-  };
-
-  useEffect(() => {
-    const changeColor = () => {
-      if (window.scrollY >= 90) {
-        setColor("#ffffff");
-        setTextColor("#000000");
-      } else {
-        setColor("transparent");
-        setTextColor("#ffffff");
-      }
-    };
-    window.addEventListener("scroll", changeColor);
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen((prev) => !prev);
   }, []);
 
-  return (
-    <div
-      style={{ backgroundColor: `${color}` }}
-      className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
-    >
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
-        <Link href="/">
-          <h1 style={{ color: `${textColor}` }} className="font-bold text-4xl">
-            MK
-          </h1>
-        </Link>
-        <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
-          <li className="p-4">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#gallery">Gallery</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#portfolio">My roads</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#contact">Contact</Link>
-          </li>
-        </ul>
+  const MenuLink = ({ href, children, className = "", onClick }: any) => {
+    const isActive = currentPath === href;
 
-        {/* Mobile Button */}
-        <div onClick={handleNav} className="block sm:hidden z-10">
-          {nav ? (
-            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
-          ) : (
-            <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
-          )}
-        </div>
-        {/* Mobile Menu */}
-        <div
-          className={
-            nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-          }
-        >
-          <ul>
-            <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
-              <Link href="/">Home</Link>
-            </li>
-            <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
-              <Link href="/#gallery">Gallery</Link>
-            </li>
-            <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
-              <Link href="/#portfolio">My roads</Link>
-            </li>
-            <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
-            >
-              <Link href="/#contact">Contact</Link>
-            </li>
+    return (
+      <li className={`${className} cursor-pointer`}>
+        <Link href={href} legacyBehavior>
+          <a
+            onClick={onClick}
+            className={`p-3 plus-sans-light text-md ${
+              isActive
+                ? "text-[#e09f26] font-bold"
+                : "text-[#828896] font-normal"
+            }`}
+          >
+            {children}
+          </a>
+        </Link>
+      </li>
+    );
+  };
+
+  // Menu icon component
+  const MenuIcon = () => (
+    <button onClick={toggleMenu} className="block lg:hidden z-10">
+      <div className={`h-6 w-6 relative`}>
+        {isMenuOpen ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        )}
+      </div>
+    </button>
+  );
+
+  return (
+    <header
+      className={`fixed items-center h-[72px] flex left-0 top-0 w-full z-10 transition-colors duration-300 bg-white px-1 md:px-[100px]`}
+    >
+      <div className="w-full flex justify-between items-center p-3 md:py-3">
+        <Link href="/" legacyBehavior>
+          <a className="flex items-center gap-1">
+            <Image
+              src={logo}
+              width={40}
+              height={40}
+              alt="USAstarsnails Logo"
+              priority
+            />
+            <h1 className={`font-bold text-base `}>USAstarsnails</h1>
+          </a>
+        </Link>
+
+        {/* Desktop Menu */}
+        <nav className="hidden lg:block">
+          <ul className={`flex  menu-item gap-4`}>
+            {MENU_ITEMS.map((item) => (
+              <MenuLink key={item.label} href={item.href}>
+                {item.label}
+              </MenuLink>
+            ))}
           </ul>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <MenuIcon />
+
+        {/* Mobile Menu Overlay */}
+        <div
+          className={`lg:hidden fixed inset-0 bg-black flex justify-center items-center transition-all duration-300 ease-in-out ${
+            isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible left-full"
+          }`}
+        >
+          <nav>
+            <ul className="text-center flex flex-col gap-4">
+              {MENU_ITEMS.map((item) => (
+                <MenuLink
+                  key={item.label}
+                  href={item.href}
+                  className="text-4xl hover:text-gray-500"
+                  onClick={toggleMenu}
+                >
+                  {item.label}
+                </MenuLink>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -1,10 +1,10 @@
 import React from "react";
-import IgImg1 from "../../assets/img-1.jpeg";
-import IgImg2 from "../../assets/img-2.jpeg";
-import IgImg3 from "../../assets/img-3.jpeg";
-import IgImg4 from "../../assets/img-4.jpeg";
-import IgImg5 from "../../assets/img-5.jpeg";
-import IgImg6 from "../../assets/img-6.jpeg";
+import IgImg1 from "../../assets/images/img-1.jpeg";
+import IgImg2 from "../../assets/images/img-2.jpeg";
+import IgImg3 from "../../assets/images/img-3.jpeg";
+import IgImg4 from "../../assets/images/img-4.jpeg";
+import IgImg5 from "../../assets/images/img-5.jpeg";
+import IgImg6 from "../../assets/images/img-6.jpeg";
 import InstagramImg from "./InstagramImg";
 
 const Instagram = () => {

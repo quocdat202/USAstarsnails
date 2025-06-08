@@ -17,8 +17,8 @@ const Gallery: NextPage = () => {
   return (
     <Layout>
       <motion.div
-        className="about"
-        id="about"
+        className="gallery"
+        id="gallery"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

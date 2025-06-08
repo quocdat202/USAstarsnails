@@ -9,8 +9,8 @@ import nail_right from "../../../assets/images/nail_right.png";
 const Feedback = () => {
   return (
     <motion.div
-      className="about"
-      id="about"
+      className="feedback"
+      id="feedback"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

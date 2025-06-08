@@ -30,8 +30,8 @@ const services = [
 const OurServices = () => {
   return (
     <motion.div
-      className="about"
-      id="about"
+      className="ourServices"
+      id="ourServices"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

@@ -8,8 +8,8 @@ import Image from "next/image";
 export const InfoSalonOpen = () => {
   return (
     <motion.div
-      className="about"
-      id="about"
+      className="infoSalonOpen"
+      id="infoSalonOpen"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

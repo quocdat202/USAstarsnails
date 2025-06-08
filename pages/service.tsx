@@ -9,8 +9,8 @@ const Service: NextPage = () => {
   return (
     <Layout>
       <motion.div
-        className="about"
-        id="about"
+        className="service"
+        id="service"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

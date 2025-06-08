@@ -39,8 +39,8 @@ const Contact: NextPage = () => {
   return (
     <Layout>
       <motion.div
-        className="about"
-        id="about"
+        className="contact"
+        id="contact"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

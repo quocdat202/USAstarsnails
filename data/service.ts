@@ -131,13 +131,13 @@ export const serviceData = [
   },
 ];
 export const galleryImage = [
+  "/images/gallery/IMG_2718.png",
   "/images/gallery/IMG_1.png",
   "/images/gallery/IMG_2.png",
   "/images/gallery/IMG_0722.png",
   "/images/gallery/IMG_1356.png",
   "/images/gallery/IMG_2198.png",
   "/images/gallery/IMG_2222.png",
-  "/images/gallery/IMG_2718.png",
   "/images/gallery/IMG_2957.png",
   "/images/gallery/IMG_3330.png",
   "/images/gallery/IMG_4173.png",

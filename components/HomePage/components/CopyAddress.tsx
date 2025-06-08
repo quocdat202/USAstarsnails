@@ -4,8 +4,8 @@ import { LocationIcon, PhoneIcon } from "../../../assets/svg";
 const CopyAddress = () => {
   return (
     <motion.div
-      className="about"
-      id="about"
+      className="copyAddress"
+      id="copyAddress"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import banner_home from "../../assets/images/banner_home.png";
+import banner_home from "../../assets/images/banner_home.jpeg";
 import { ShimeIcon } from "../../assets/svg";
 import CopyAddress from "./components/CopyAddress";
 import Feedback from "./components/Feedback";
@@ -14,8 +14,8 @@ const HomePage = () => {
 
   return (
     <motion.div
-      className="about"
-      id="about"
+      className="homePage"
+      id="homePage"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

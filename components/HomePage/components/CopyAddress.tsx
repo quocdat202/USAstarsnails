@@ -35,7 +35,7 @@ const CopyAddress = () => {
             <div className="flex flex-col gap-[6px]">
               <h3 className="text-[#8B919E] text-sm text-plus-sans">Address</h3>
               <p className="text-[#050810] text-plus-sans">
-                53 High street North, Dunstable LUG 1JF
+                53 High street North, Dunstable LU6 1JF
               </p>
             </div>
           </div>
@@ -48,7 +48,7 @@ const CopyAddress = () => {
           </div>
         </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d560.8278140530487!2d-0.5241238255262736!3d51.88767137875415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764f072e7d5551%3A0x4cba582708ac9f91!2zNTMgSGlnaCBTdCBOLCBEdW5zdGFibGUgTFU2IDFKRiwgVsawxqFuZyBRdeG7kWMgQW5o!5e0!3m2!1svi!2s!4v1749025097794!5m2!1svi!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d623.6754655660991!2d-0.5240537674250749!3d51.88761677069679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764f072e7d5551%3A0x4cba582708ac9f91!2zNTMgSGlnaCBTdCBOLCBEdW5zdGFibGUgTFU2IDFKRiwgVsawxqFuZyBRdeG7kWMgQW5o!5e0!3m2!1svi!2s!4v1749437115184!5m2!1svi!2s"
           height="456"
           style={{ border: "0" }}
           loading="lazy"

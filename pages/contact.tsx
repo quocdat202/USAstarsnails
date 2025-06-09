@@ -206,7 +206,7 @@ const Contact: NextPage = () => {
                     Address
                   </h3>
                   <p className="text-[#050810] text-plus-sans">
-                    53 High street North, Dunstable LUG 1JF
+                    53 High street North, Dunstable LU6 1JF
                   </p>
                 </div>
               </div>

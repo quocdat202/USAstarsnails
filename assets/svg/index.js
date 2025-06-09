@@ -307,3 +307,36 @@ export const EmailIcon = () => {
     </svg>
   );
 };
+
+export const HamburgerIcon = (props) => {
+  const { fill = "#101014", width = "20", height = "20" } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill={fill} />
+    </svg>
+  );
+};
+
+export const CloseIcon = (props) => {
+  const { fill = "#F2F2F3", width = "20", height = "20" } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 16 16"
+      fill="none"
+    >
+      <path
+        d="M12.6673 4.27337L11.7273 3.33337L8.00065 7.06004L4.27398 3.33337L3.33398 4.27337L7.06065 8.00004L3.33398 11.7267L4.27398 12.6667L8.00065 8.94004L11.7273 12.6667L12.6673 11.7267L8.94065 8.00004L12.6673 4.27337Z"
+        fill={fill}
+      />
+    </svg>
+  );
+};

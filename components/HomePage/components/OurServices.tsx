@@ -16,7 +16,7 @@ const services = [
     id: 2,
     src: service_2,
     title: "Acrylic",
-    desc: " With our unique BIAB Gel technique",
+    desc: "If it’s strong, durable, and longer nails you’re looking for then Acrylic Extensions are the perfect option.  They can create natural-looking medium extensions or add extreme lengths to your nails quickly, Acrylics can also change the appearance of the nail shape too. Perfect for clients who want longer and stronger nails",
   },
   {
     id: 3,

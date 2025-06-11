@@ -33,7 +33,7 @@ export const serviceData = [
       { label: "Price", key: "price" },
     ],
     data: [
-      { service: "Lavender and green tea", price: "" },
+      { service: "Lavender and green tea", price: "£45" },
       { service: "Coffee", price: "£45" },
     ],
   },

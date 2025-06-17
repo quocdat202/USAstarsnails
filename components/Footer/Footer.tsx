@@ -4,6 +4,7 @@ import logo from "../../assets/images/logo.png";
 import { MENU_ITEMS } from "../../constants";
 import Link from "next/link";
 import { FacebookIcon, InstagramIcon, WhatsAppIcon } from "../../assets/svg";
+import { handleWhatsAppOpen } from "../../functions";
 
 export const Footer = () => {
   const MenuLink = ({ href, children, className = "", onClick }: any) => (
@@ -47,7 +48,9 @@ export const Footer = () => {
             >
               <InstagramIcon />
             </a>
-            <WhatsAppIcon />
+            <button onClick={handleWhatsAppOpen} style={{ cursor: "pointer" }}>
+              <WhatsAppIcon />
+            </button>
           </div>
         </div>
 
@@ -71,7 +74,9 @@ export const Footer = () => {
           >
             <InstagramIcon />
           </a>
-          <WhatsAppIcon />
+          <button onClick={handleWhatsAppOpen} style={{ cursor: "pointer" }}>
+            <WhatsAppIcon />
+          </button>
         </div>
       </div>
       <p className="plus-sans-light text-white text-sm font-normal text-center">

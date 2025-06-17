@@ -26,14 +26,14 @@ const HomePage = () => {
       }}
     >
       <div className="flex mb-[18px] flex-col gap-10">
-        <div className="flex gap-8 px-3 md:px-[100px] pb-0 items-center justify-center">
-          <div className="hidden sm:block">
+        <div className=" gap-8 px-3 md:px-[100px] mb-[240px] sm:mb-0 pb-0 relative">
+          <div className="hidden sm:block w-fit relative top-12 lg:top-0 md:top-12">
             <ShimeIcon
-              width={isMobile ? 150 : 207}
-              height={isMobile ? 120 : 190}
+              width={isMobile ? 150 : 190}
+              height={isMobile ? 120 : 200}
             />
           </div>
-          <div className="flex flex-col gap-5 items-center">
+          <div className="flex flex-col gap-5 items-center absolute top-0 w-full left-0">
             <h1 className="libre-bodoni-semi  text-[32px] lg:text-[56px] md:text-[44px] text-center">
               Shine Like a Star with Our Nails
             </h1>

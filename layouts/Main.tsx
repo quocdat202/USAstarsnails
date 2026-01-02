@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import NavBar from "../components/NavigationBar/NavBar";
 import { Footer } from "../components/Footer/Footer";
 import { FloatButton } from "../components/FloatButton/FloatButton";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 type LayoutType = {
   title?: string;
@@ -23,6 +24,7 @@ const MainLayout = ({ children, title = "USAstarsnails" }: LayoutType) => {
       </Head>
 
       <NavBar />
+      <SpeedInsights />
 
       <main style={{ marginTop: 100 }}>
         {children}

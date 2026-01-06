@@ -5,6 +5,7 @@ import NavBar from "../components/NavigationBar/NavBar";
 import { Footer } from "../components/Footer/Footer";
 import { FloatButton } from "../components/FloatButton/FloatButton";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 type LayoutType = {
   title?: string;
@@ -25,7 +26,7 @@ const MainLayout = ({ children, title = "USAstarsnails" }: LayoutType) => {
 
       <NavBar />
       <SpeedInsights />
-
+      <Analytics />
       <main style={{ marginTop: 100 }}>
         {children}
         <FloatButton />
